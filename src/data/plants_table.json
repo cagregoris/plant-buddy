@@ -1,0 +1,40 @@
+
+{"plants": [
+  {
+    "filename": "snake",
+    "cn": "Snake Plant (Mother-in-Law's Tongue)",
+    "sn": "Sansevieria Trifasciata",
+    "growth": "Height 3ft.",
+    "light": ["Low Light", "Medium Light", "High Light"],
+    "water": "Water every 10-15 days",
+    "repotting": "Minimize - only repot if it's current pot cracks from growth",
+    "fertilizer": "Once per month during the main growing season (spring - fall)",
+    "propagation": ["Division", "Leaf-cutting"],
+    "toxicity": "Toxic to pets"
+  },
+  {
+    "filename": "fiddle",
+    "cn": "Fiddle Leaf Fig",
+    "sn": "Ficus Lyrata",
+    "growth": "Height 10ft.",
+    "light": ["Medium Light"],
+    "water": "Water every 7-10 days and decrease watering in the winter",
+    "repotting": "Once per year until it matures",
+    "fertilizer": "Once per month during the spring and summer",
+    "propagation": ["Leaf-cutting"],
+    "toxicity": "Toxic to pets"
+  },
+  {
+    "filename": "dragon",
+    "cn": "Dragon Tree",
+    "sn": "Dracaena Marginata",
+    "growth": "Height 8ft.",
+    "light": ["Medium Light"],
+    "water": "Water once per week",
+    "repotting": "Every two years",
+    "fertilizer": "Not necessary",
+    "propagation": ["Stem-cutting"],
+    "toxicity": "Toxic to pets"
+  }
+]
+}
