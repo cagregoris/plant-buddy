@@ -1,68 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import fireDb from "../firebase";
+import db from "../firebase";
 import { Link } from 'react-router-dom';
+import { collection, getDocs } from "firebase/firestore"
 
 import '../styles/home.css'
 
-// IMAGES
-import snake from "../images/snake.jpg"
-import fiddle from "../images/fiddle.jpg"
-import dragon from "../images/dragon.jpg"
-
 const Home = () => {
-  const [data, setData] = useState({});
+  const [plants, setPlants] = useState([]);
+  const plantsReference = collection(db, "plants")
 
+  
   useEffect(() => {
-    fireDb.child("plants").on("value", (snapshot) => {
-      if(snapshot.val() !== null) {
-        setData({...snapshot.val()})
-      } else {
-        setData({});
-      }
-    });
+    
+    const getPlants = async() => {
+      const data = await getDocs(plantsReference);
+      setPlants(data.docs.map((doc) => ({...doc.data(), id: doc.id })));
+    }
+    
+    getPlants()
 
-    return () => {
-      setData({});
-    };
-  }, []);
+  }, [])
 
- const imgArray = [
-  {
-    filename: snake,
-    sn: "Sansevieria Trifasciata"
-  },
-  {
-    filename: fiddle,
-    sn: "Ficus Lyrata"
-  },
-  {
-    filename: dragon,
-    sn: "Dracaena Marginata"
-  }
-]
-
-const image = Object.keys(data).map((id) => {
-  return data.id
-})
-console.log(image)
 
   return (
     <div className="page--container">
-      <div className="all-plants--container">
-            {Object.keys(data).map((id) => {
-              return (
-                <div className="plant--container">
-                  <div className="thumbnail--img">
-                    <img src={data.filename} />
-                  </div>
-                  <div className="thumbnail--summary">
-                    <h2>{data[id].cn}</h2>
-                    <h4>{data[id].sn}</h4>
-                  </div>
-                </div>
-              )
-            })}
-      </div>
+      {plants.map((plant) => {
+        return <div>
+          <h1>{plant.common}</h1>
+          <h1>{plant.id}</h1>
+          <img src={plant.image} style={{width: "400px"}} />
+        </div>
+      })}
     </div>
   )
 }
