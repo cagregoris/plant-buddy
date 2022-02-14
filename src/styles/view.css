@@ -1,0 +1,122 @@
+.view--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.view-info--div {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  align-items: center;
+  background-color: #fde6ef;
+  margin: 50px;
+  border-radius: 50px;
+}
+
+.view-info--div h4 {
+  color: #ffa500;
+  text-transform: uppercase;
+}
+
+.view-info--div span {
+  color: gray;
+}
+
+.view-left {
+  padding: 50px;
+}
+
+.view-left h1 {
+  font-family: 'Akaya Telivigala';
+  text-transform: uppercase;
+  font-size: 40px;
+  color: #ffffe2;
+  text-shadow: #ffa500 2px 2px;
+}
+
+.view-left h3 {
+  color: #ffa500;
+}
+
+.view-right {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-gap: 40px;
+  padding: 40px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 819px) {
+
+  .view-left h1 {
+    font-size: 30px;
+  }
+
+  .view--container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .view-info--div {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 20px;
+  }
+
+  .view-info--div h1 {
+    margin: 0px;
+  }
+
+  .view-right {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-gap: 10px 40px;
+    padding: 40px;
+  }
+
+  .view-right h4 {
+    margin-bottom: 5px;
+  }
+
+  .view-right {
+    padding-top: 0px;
+  }
+
+}
+
+@media only screen and (min-width: 820px) and (max-width: 1024px) {
+  .view--container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .view-info--div {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 20px;
+  }
+
+  .view-info--div h1 {
+    margin: 0px;
+  }
+
+  .view-right {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 40px 100px;
+    padding: 40px;
+  }
+
+  .view-right h4 {
+    margin-bottom: 5px;
+  }
+
+  .view-right {
+    padding-top: 0px;
+  }
+
+}

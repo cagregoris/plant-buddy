@@ -1,0 +1,74 @@
+#home-btn {
+  width: fit-content;
+  font-weight: 500;
+  color: #ffa500;
+}
+
+#home-link {
+  text-decoration: none;
+  color: #ffa500;
+}
+
+.intro--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.intro--title {
+  text-align: center;
+}
+
+.intro--title h4 {
+  color: #ffffe2;
+  font-size: 30px;
+}
+
+.intro--title h1 {
+  font-family: 'Akaya Telivigala';
+  text-transform: uppercase;
+  font-size: 85px;
+  color: #ffffe2;
+  text-shadow: #ffa500 5px 5px;
+  margin: auto;
+}
+
+.intro--description {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  font-size: 25px;
+  padding-bottom: 50px;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 550px) {
+  .intro--container {
+    height: auto;
+    
+  }
+
+  .intro--title h1 {
+    font-size: 75px;
+    margin-top: 10px;
+  }
+
+  .intro--title h4 {
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+
+  .intro--description {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    font-size: 20px;
+    padding-bottom: 0px;
+    font-weight: 500;
+  }
+  
+}
